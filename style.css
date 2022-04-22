@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+form{
+    background: rgb(158, 75, 147);
+    color: rgb(12, 11, 11);
+    margin-top: 10%;
+    margin-left: 16%;
+    width: 70vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.input{
+    color: rgb(7, 248, 39);
+    margin-top: 2%;
+    border: 1px dotted yellow;
+    background: rgb(15, 48, 109);
+}
+.input input{
+    margin: 8px;
+    
+}
+.input label:hover{
+    background: rgb(208, 228, 30);  
+    cursor: pointer;  
+    color: red;
+}
+.btn{
+    margin-top: 5%;
+    padding: 8px 15px;
+    font-size:large;
+}
+.btn input:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgb(4, 235, 252);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #ff00ff, #7a00ff, #ff00c8, #ff0000);
+}
+.showscore{
+    margin: 20px;
+    color: yellow;
+    background: red;
+}
+#confetti-canvas{
+    width: 100%;
+    height: 300px;
+    margin-top: -190px;
+}
+
