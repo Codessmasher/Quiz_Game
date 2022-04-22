@@ -11,7 +11,7 @@ var questionArray =
         {
             Q: 'Q2) Which of the following is used to create Web Pages ?',
             a: "C++",
-            b: "HYPERTEXT MAKEUP LANGUAGE",
+            b: "HTML",
             c: "C",
             d: "JAVA",
             ans: "q2",
