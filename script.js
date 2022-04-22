@@ -11,7 +11,7 @@ var questionArray =
         {
             Q: 'Q2) Which of the following is used to create Web Pages ?',
             a: "C++",
-            b: "HTML",
+            b: "HYPERTEXT MAKEUP LANGUAGE",
             c: "C",
             d: "JAVA",
             ans: "q2",
@@ -63,10 +63,28 @@ function deselectq(){
     ansSelection.forEach((currentElem) =>currentElem.checked=false);
 }
 
+function showCR(){
+    document.querySelector('.showcorrect').innerHTML=("OOPs Answer is WRONG");
+}
+
 submit.addEventListener('click', () => {
     const checkedAns = getcheckedAns();
     if(checkedAns==questionArray[qcount].ans){
-        score++;
+        document.querySelector('.showcorrect').style.visibility = 'visible';
+       document.querySelector('.showcorrect').innerHTML=("You have Answered Correctly");
+       setTimeout(()=>{       
+        document.querySelector('.showcorrect').style.visibility = 'hidden';
+      },3000);
+       score++;  
+    }
+    else{
+        
+      document.querySelector('.showcorrect').style.visibility = 'visible';
+      document.querySelector('.showcorrect').innerHTML=("OOPs Answer is WRONG");
+      setTimeout(()=>{       
+        document.querySelector('.showcorrect').style.visibility = 'hidden';
+      },2000);
+        
     };
     qcount++;
     deselectq();
@@ -76,7 +94,7 @@ submit.addEventListener('click', () => {
     else{
         if(score>0){startConfetti();}
         
-        document.querySelector('.showscore').innerHTML=("You have scored "+score+" Out of "+" "+questionArray.length);
+       document.querySelector('.showscore').innerHTML=("You have scored "+score+" Out of "+" "+questionArray.length);
        button.setAttribute('value','Play Again');
        button.style.background="black";
        button.style.color="white";
@@ -85,7 +103,3 @@ submit.addEventListener('click', () => {
        })
     }
 });
-
-
-
-
